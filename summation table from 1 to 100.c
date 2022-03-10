@@ -1,12 +1,13 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-// for¹®À» ÀÌ¿ëÇØ 1ºÎÅÍ 100±îÁö °è¼ÓÇØ¼­ ´õÇÏ´Â °è»ê°ú Å×ÀÌºí Çü½ÄÀ¸·Î cmd Ã¢¿¡¼­ º¸ÀÌ°Ô ÇÏ´Â °Å
-// ±³¼ö´Ô 2ÇÐ³â c¾ð¾î ¼ö¾÷ °úÁ¦ ´Ù½Ã Ç®¾îº» °Í
+// forë¬¸ì„ ì´ìš©í•´ 1ë¶€í„° 100ê¹Œì§€ ê³„ì†í•´ì„œ ë”í•˜ëŠ” ê³„ì‚°ê³¼ í…Œì´ë¸” í˜•ì‹ìœ¼ë¡œ cmd ì°½ì—ì„œ ë³´ì´ê²Œ í•˜ëŠ” ê±°
+// êµìˆ˜ë‹˜ 2í•™ë…„ cì–¸ì–´ ìˆ˜ì—… ê³¼ì œ ë‹¤ì‹œ í’€ì–´ë³¸ ê²ƒ
 
 int getSum(int n) {
-	// ¾ç¼ö°¡ µé¾î¿ÀÁö ¾ÊÀ¸¸é Á¾·á Ã³¸®
+	// ì–‘ìˆ˜ê°€ ë“¤ì–´ì˜¤ì§€ ì•Šìœ¼ë©´ ì¢…ë£Œ ì²˜ë¦¬
 	if (n <= 0) {
-		printf("¾ç¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		printf("ì–‘ìˆ˜ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”");
 		exit(-1);
 	}
 	return n*(n+1)/2;
@@ -18,23 +19,23 @@ void main() {
 	int k = 1;
 
 	for (int i = 0; i < 10; i++) {
-		// Å×ÀÌºí ¸ð¾ç Àâ±â
-		putchar('+'); // printf »ç¿ëÇÏÁö ¸»¶ó ÇÏ¼Å¼­
+		// í…Œì´ë¸” ëª¨ì–‘ ìž¡ê¸°
+		putchar('+'); // printf ì‚¬ìš©í•˜ì§€ ë§ë¼ í•˜ì…”ì„œ
 		
 		for (int j = 0;j < 10;j++)
 			printf("-----+");
 
-		putchar('\n'); // À§ÀÇ 2Áß for ¹®ÀÌ ³¡³ª¸é ÁÙ ¶ç¿ò
+		putchar('\n'); // ìœ„ì˜ 2ì¤‘ for ë¬¸ì´ ëë‚˜ë©´ ì¤„ ë„ì›€
 
 		putchar('|');
 
-		// ¼ýÀÚ °è»ê + Å×ÀÌºí ¸ð¾ç µû¶ó ¿©¹é Ãß°¡
+		// ìˆ«ìž ê³„ì‚° + í…Œì´ë¸” ëª¨ì–‘ ë”°ë¼ ì—¬ë°± ì¶”ê°€
 		for (int j = 0;j < 10;j++)
 			printf("%5d|", getSum(k++));
 
 		putchar('\n');
 	}
-	// ¸¶Áö¸· ÁÙ Å×ÀÌºí ¸ð¾ç Àâ±â
+	// ë§ˆì§€ë§‰ ì¤„ í…Œì´ë¸” ëª¨ì–‘ ìž¡ê¸°
 	putchar('+');
 	for (int j = 0;j < 10;j++)
 		printf("-----+");
