@@ -1,0 +1,52 @@
+**함수 지정
+
+#include <stdio.h>
+
+int getSum(int n)
+{
+	int sum;
+	int x;
+
+
+	sum = 0;
+	for(x = 1; x<= n; x++) {
+		sum = sum + x;
+	}
+
+	return sum;
+}
+
+int getSum2(int from, int to)
+{
+	int sum;
+	int x;
+
+	sum = 0;
+	for(x = from; x <=to; x++){
+		sum = sum + x;
+	}
+
+	return sum;
+
+}
+main()
+{
+	int s;
+
+	//function call 함수 호출
+	s = getSum(100);	// actual parameter 실인자
+	printf("%d\n", s);
+
+	s = getSum(30);
+	printf("%d\n", s);
+
+	s = getSum(50);
+	printf("d\n",  s);
+
+	s = getSum2(10, 100);
+	printf("%d\n", s);
+
+	s = getSum2(110, 500);
+	printf("%d\n", s);
+
+}

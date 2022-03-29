@@ -1,0 +1,48 @@
+**do ~ while문
+
+기본 형식
+
+do{ 계속 할 문장 } while ( 조건 지정 );
+
+ex 1) 숫자 1~10까지 더하기
+#include <stdio.h>
+
+main()
+{
+	int sum;
+	int x;
+
+	x = 1;
+	sum = 0;
+
+	do{
+		sum = sum + x;
+		x = x + 1;
+	}// 위의 식을 반복한다
+	while (x < 11); // x가 11보다 작은 동안
+	//while 문에는 세미콜론 ; 가 필요하지 않다
+
+	printf("%d\n", sum);
+}
+
+여기서 대괄호 {} 를 열고 닫을 때는 계단 형식으로 tab 키로 구분 지어 주는 것이 필요하다
+
+ex 2) while문 만을 사용한 더하기
+#include <stdio.h>
+
+main()
+{
+	int sum;
+	int x;
+
+	x = 1;
+	sum = 0;
+
+	while(x < 100) {
+	sum = sum + x;
+	x = x + 1;
+		}
+
+
+	printf("%d\n", sum);
+}

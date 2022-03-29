@@ -1,0 +1,28 @@
+**goto 문
+
+지정한 위치로 가는 것
+
+if문 과 거의 항상 같이 쓴다.
+	> 이유는 if 문이 없으면 무한 loop가 발생하기 때문이다
+
+ex)
+#include <stdio.h>
+
+main()
+{
+	int sum;
+	int x;
+
+	x = 1;
+	sum = 0;
+
+Busan:    //부산이라는 위치 지정
+	sum = sum + x;
+	x = x + 1;
+	if(x < 11)//만약 x가 11 이전이면goto Busan;//부산으로 가라
+
+		 
+	printf("%d\n", sum);
+}
+
+대규모의 프로그램에서는 goto문을 쓰면 파일의 구조 확인이 어렵기 때문에 절대 쓰지 않는다
